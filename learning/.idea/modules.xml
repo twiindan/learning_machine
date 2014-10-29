@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/create_ldap_users/.idea/create_ldap_users.iml" filepath="$USER_HOME$/PycharmProjects/create_ldap_users/.idea/create_ldap_users.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learning.iml" filepath="$PROJECT_DIR$/.idea/learning.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/tdaf-sprayer/.idea/tdaf-sprayer.iml" filepath="$USER_HOME$/PycharmProjects/tdaf-sprayer/.idea/tdaf-sprayer.iml" />
+    </modules>
+  </component>
+</project>
+
