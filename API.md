@@ -83,7 +83,7 @@ RESPONSE:
 
 ## UPDATE QUESTION INFORMATION
 
-URL: POST /questions/
+URL: PUT /questions/{questionID}
 BASIC AUTHENTICATION
 
 BODY: {
@@ -131,5 +131,5 @@ BODY:   {
 RESPONSE:
     200 OK including information if the answe is correct and in witch box is
 
-    
+
 
