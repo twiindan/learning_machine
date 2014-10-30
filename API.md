@@ -10,9 +10,9 @@ Learning Machine API
 URL: POST /user/
 BASIC AUTHENTICATION
 BODY: {
-        username: <string>
-        password: <string>
-        email: <string>
+        username: string
+        password: string
+        email: string
       }
 
 RESPONSE:
@@ -54,8 +54,8 @@ RESPONSE:
 URL: POST /questions/
 BASIC AUTHENTICATION
 BODY: {
-        question: <string>
-        answer: <string>
+        question: string
+        answer: string
       }
 
 RESPONSE:
@@ -87,9 +87,9 @@ URL: PUT /questions/{questionID}
 BASIC AUTHENTICATION
 
 BODY: {
-        id: <int>
-        question: <string>
-        answer: <string>
+        id: integer
+        question: string
+        answer: string
       }
 
 RESPONSE:
@@ -124,8 +124,8 @@ URL: POST /play/
 BASIC AUTHENTICATION
 
 BODY:   {
-        "id": <integer>,
-        "answer": <string>
+        "id": integer,
+        "answer": string
         }
 
 RESPONSE:
