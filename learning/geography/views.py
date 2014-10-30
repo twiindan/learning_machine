@@ -207,10 +207,9 @@ class UserDetailedView(APIView):
     def get_object(self, pk):
 
         try:
-            user = User.objects.get(username=pk)
-            return user
-        except UserModel.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return User.objects.get(username=pk)
+        except User.DoesNotExist:
+            raise Http404
 
     def get(self, request, pk, format=None):
 
