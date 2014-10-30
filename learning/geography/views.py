@@ -162,7 +162,7 @@ class PlayBase(APIView):
 
         if (geography.answer.lower() == request.DATA['answer'].lower()):
 
-            if user_question.box < 3    :
+            if user_question.box < 3:
                 user_question.box += 1
                 user_question.save()
 
