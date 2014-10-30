@@ -9,7 +9,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.renderers import UnicodeJSONRenderer, BrowsableAPIRenderer
 from geography.models import Geography, QuestionsByUserModel
-from geography.serializer import GeographySerializer, PlaySerializer, AnswerSerializer, UserSerializer, \
+from geography.serializer import GeographySerializer, PlaySerializer, UserSerializer, \
     QuestionsByUserModelSerializer
 from random import choice
 from django.contrib.auth.models import User
@@ -25,7 +25,7 @@ class QuestionBase(APIView):
     def get(self, request, format=None):
 
         geography = Geography.objects.all()
-        serializer = GeographySerializer(geography, many=True)
+        serializer = GeographySerializer(geography)
         return Response(serializer.data)
 
     def post(self, request, format=None):
@@ -50,6 +50,7 @@ class QuestionDetail(APIView):
     def get_object(self, pk):
         try:
             geography = Geography.objects.get(pk=pk)
+            return geography
         except Geography.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -135,13 +136,6 @@ class PlayBase(APIView):
             for question in all_valid_questions:
 
                 print question.pk
-                #a1 = QuestionsByUserModel(username=request.user, box=0)
-                #a1.save()
-                #a1.question.add(question)
-
-
-            #serializer = QuestionsByUserModelSerializer(questions_by_user, many=True)
-            #print serializer.data
 
             return Response('User have not the same number of questions: {}'.format(len(questions_by_user)))
 
