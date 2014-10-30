@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils import timezone
-import datetime, calendar, time
+import datetime
 from django.utils import timezone
 
 # -*- coding: utf-8 -*-
