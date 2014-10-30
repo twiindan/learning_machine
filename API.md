@@ -3,9 +3,9 @@ API
 
 Learning Machine API
 
-### USERS
+## USERS
 
-## CREATE USER
+### CREATE USER
 
 URL: POST /user/
 BASIC AUTHENTICATION
@@ -19,7 +19,7 @@ RESPONSE:
     201 CREATED
     400 BAD REQUEST
 
-## GET ALL USERS
+### GET ALL USERS
 
 URL: GET /user/
 BASIC AUTHENTICATION
@@ -28,7 +28,7 @@ RESPONSE:
     200 OK including list of users
 
 
-## GET USER
+### GET USER
 
 URL: GET /user/{userID}
 BASIC AUTHENTICATION
@@ -38,7 +38,7 @@ RESPONSE:
     404 Not Found
 
 
-## DELETE USER
+### DELETE USER
 
 URL: DELETE /user/{userID}
 BASIC AUTHENTICATION
@@ -47,9 +47,9 @@ RESPONSE:
     204 No Content
     404 Not Found
 
-### QUESTIONS
+## QUESTIONS
 
-## CREATE QUESTION
+### CREATE QUESTION
 
 URL: POST /questions/
 BASIC AUTHENTICATION
@@ -63,7 +63,7 @@ RESPONSE:
     400 BAD REQUEST
     409 CONFLICT
 
-## GET ALL QUESTIONS
+### GET ALL QUESTIONS
 
 URL: GET /questions/
 BASIC AUTHENTICATION
@@ -71,7 +71,7 @@ BASIC AUTHENTICATION
 RESPONSE:
     200 OK including list of questions
 
-## GET QUESTION INFORMATION
+### GET QUESTION INFORMATION
 
 URL: GET /questions/{questionID}
 BASIC AUTHENTICATION
@@ -81,7 +81,7 @@ RESPONSE:
     404 Not Found
 
 
-## UPDATE QUESTION INFORMATION
+### UPDATE QUESTION INFORMATION
 
 URL: PUT /questions/{questionID}
 BASIC AUTHENTICATION
@@ -99,7 +99,7 @@ RESPONSE:
     409 CONFLICT
 
 
-## DELETE QUESTION
+### DELETE QUESTION
 
 URL: DELETE /questions/{questionID}
 BASIC AUTHENTICATION
@@ -108,9 +108,9 @@ RESPONSE:
     204 Not Content
     404 Not Found
 
-### PLAY
+## PLAY
 
-## Get Question to Play
+### Get Question to Play
 
 URL: GET /play/
 BASIC AUTHENTICATION
@@ -118,7 +118,7 @@ BASIC AUTHENTICATION
 RESPONSE:
     200 OK including the questionID and the question
 
-##Answer Question
+### Answer Question
 
 URL: POST /play/
 BASIC AUTHENTICATION
