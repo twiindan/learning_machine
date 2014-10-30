@@ -1,13 +1,9 @@
 __author__ = 'arobres'
 # -*- coding: utf-8 -*-
 
-
-
 from rest_framework import serializers
 from geography.models import Geography, QuestionsByUserModel
 from django.contrib.auth.models import User
-
-
 
 class GeographySerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,7 +26,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('username', 'password', 'email')
 
 class QuestionsByUserModelSerializer(serializers.ModelSerializer):
-
 
     class Meta:
         model = QuestionsByUserModel
