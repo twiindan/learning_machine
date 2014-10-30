@@ -15,6 +15,8 @@ from random import choice
 from django.contrib.auth.models import User
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from django.http import Http404
+
 
 
 class QuestionBase(APIView):
@@ -49,10 +51,9 @@ class QuestionDetail(APIView):
 
     def get_object(self, pk):
         try:
-            geography = Geography.objects.get(pk=pk)
-            return geography
+            return Geography.objects.get(pk=pk)
         except Geography.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            raise Http404
 
     def get(self, request, pk, format=None):
 
